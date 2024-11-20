@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-static",
+        "-mconsole",
+        "src/main.cpp",
+        "src/logappend.cpp",
+        "src/logread.cpp",
+        "src/auth.cpp",
+        "src/utils/input_validation.cpp",
+        "src/utils/cryptography.cpp",
+        "-o",
+        "secure_logging.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Generated task with additional flags for Windows compilation"
+    }
+  ]
+}
+

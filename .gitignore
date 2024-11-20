@@ -1,0 +1,3 @@
+# Ignore sensitive data and unnecessary files
+*.log
+*.env

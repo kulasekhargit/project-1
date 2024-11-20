@@ -1,0 +1,2 @@
+# Configuration file
+log_file_path: "/var/log/secure-logs.txt"

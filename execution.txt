@@ -1,0 +1,34 @@
+Basic Compliation and testing:
+
+g++ -g -static -mconsole src/main.cpp src/auth.cpp src/logappend.cpp src/logread.cpp src/utils/input_validation.cpp src/utils/cryptography.cpp -I include -o secure_logging.exe
+
+
+./secure_logging.exe logappend entry user666 room666   
+
+
+Unit Testing:
+
+INPUT: 
+
+g++ -g -std=c++17 tests/test_input_validation.cpp src/utils/input_validation.cpp -I include -o test_input_validation           
+
+./test_input_validation 
+
+
+APPEND:
+
+g++ -g -std=c++17 tests/test_logappend.cpp src/logappend.cpp src/utils/input_validation.cpp src/utils/cryptography.cpp -I include -o test_logappend
+
+./test_logappend
+
+READ: 
+
+g++ -g -std=c++17 tests/test_logread.cpp src/logread.cpp -I include -o test_logread 
+
+./test_logread        
+
+CRYPTO:
+
+g++ -g -std=c++17 tests/test_cryptography.cpp src/utils/cryptography.cpp -I include -o test_cryptography
+
+./test_cryptography                                  
